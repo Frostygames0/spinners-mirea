@@ -1,0 +1,50 @@
+Checks:
+  - modernize-use-using
+  - modernize-use-override
+  - modernize-use-nodiscard
+  - misc-const-correctness
+  - misc-unused-parameters
+  - readability-identifier-naming
+  - readability-avoid-const-params-in-decls
+  - cppcoreguidelines-slicing
+  - cppcoreguidelines-init-variables
+  - cppcoreguidelines-avoid-non-const-global-variables
+
+CheckOptions:
+  ## Macro
+  - { key: readability-identifier-naming.MacroDefinitionCase,    value: SCREAMING_SNAKE_CASE }
+
+  ## Enums
+  - { key: readability-identifier-naming.EnumCase,               value: PascalCase }
+  - { key: readability-identifier-naming.EnumConstantCase,       value: PascalCase }
+
+  ## Functions
+  - { key: readability-identifier-naming.FunctionCase,           value: PascalCase }
+
+  ## Classes
+  - { key: readability-identifier-naming.ClassCase,              value: PascalCase }
+
+  # Members:
+  - { key: readability-identifier-naming.ClassMemberCase,        value: camelCase }
+
+  # Non-static members
+  - { key: readability-identifier-naming.PrivateMemberPrefix,    value: m_ }
+  - { key: readability-identifier-naming.ProtectedMemberPrefix,  value: m_ }
+
+  # Static members
+  - { key: readability-identifier-naming.PrivateStaticMemberPrefix, value: s_ }
+  - { key: readability-identifier-naming.ProtectedStaticMemberPrefix, value: s_ }
+
+  ## Global variables
+  - { key: readability-identifier-naming.GlobalVariablePrefix, value: g_ }
+
+  ## Constants
+  - { key: readability-identifier-naming.GlobalConstantCase, value: camelCase }
+  - { key: readability-identifier-naming.GlobalConstantPrefix, value: "" }
+
+  - { key: readability-identifier-naming.PublicStaticConstantCase, value: camelCase }
+  - { key: readability-identifier-naming.PublicStaticConstantPrefix, value: "" }
+
+  - { key: readability-identifier-naming.PrivateStaticConstantCase, value: camelCase }
+  - { key: readability-identifier-naming.PrivateStaticConstantPrefix, value: "" }
+

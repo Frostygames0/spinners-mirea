@@ -1,0 +1,12 @@
+---
+BasedOnStyle: Microsoft
+BreakTemplateDeclarations: Yes
+AlignArrayOfStructures: Left
+AlignEscapedNewlines: DontAlign
+PointerAlignment: Middle
+IndentCaseLabels: true
+BinPackArguments: false
+BinPackParameters: OnePerLine
+AllowShortFunctionsOnASingleLine: Inline
+PackConstructorInitializers: Never
+NamespaceIndentation: Inner
