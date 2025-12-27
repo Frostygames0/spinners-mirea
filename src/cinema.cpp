@@ -5,8 +5,14 @@ using ll = long long;
 
 int main()
 {
-    int n = 0, k = 0;
+    ll n = 0, k = 0;
     std::cin >> n >> k;
+
+    if (k < 1 || n < 1 || k > n || n > 1000000000000000000LL)
+    {
+        std::cerr << "Values out of bounds!";
+        return -1;
+    }
 
     std::map<ll, ll, std::greater<ll>> map;
     map[n] = 1;

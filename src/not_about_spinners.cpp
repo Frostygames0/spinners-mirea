@@ -2,11 +2,16 @@
 
 int main()
 {
-    int m = 0, n = 0;
-
-    std::cin >> m >> n;
+    int n = 0, m = 0;
+    std::cin >> n >> m;
 
     int ansX = 0, ansY = 0;
+
+    if (n > 75000 || m > 75000)
+    {
+        std::cerr << "Too big values!";
+        return -1;
+    }
 
     for (int i = 0; i < n; i++)
     {

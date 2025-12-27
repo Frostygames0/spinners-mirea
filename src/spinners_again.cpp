@@ -19,6 +19,11 @@ int main()
 {
     int m = 0;
     std::cin >> m;
+    if (m > 2000000000)
+    {
+        std::cerr << "Too big value!";
+        return -1;
+    }
 
     int spin4 = m % 3;
     int spin3 = (m - 4 * spin4) / 3;

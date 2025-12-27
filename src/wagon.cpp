@@ -19,15 +19,42 @@ constexpr int totalSeatsPerSection = 6;
 
 int main()
 {
-    int freeSeatsPerSection[sections]{};
-
     int n = 0;
     std::cin >> n;
+
+    if (n < 0)
+    {
+        std::cerr << "There are no negative seats;";
+        return -1;
+    }
+
+    if (n > 54)
+    {
+        std::cerr << "This seat count won't fit into the wagon!";
+        return -1;
+    }
+
+    int freeSeatsPerSection[sections]{};
+    int duplicates[54]{};
 
     for (int i = 0; i < n; i++)
     {
         int seat = 0;
         std::cin >> seat;
+
+        if (seat < 1 || seat > 54)
+        {
+            std::cerr << "Seat out of bounds!";
+            return -1;
+        }
+
+        if (duplicates[seat - 1] > 0)
+        {
+            std::cerr << "Duplicate seat " << seat;
+            return -1;
+        }
+
+        duplicates[seat - 1]++;
 
         freeSeatsPerSection[CalculateTrainSectionBySeat(seat)]++;
     }
